@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserva - Alrock Burger</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Alrock" class="logo">
+    <nav class="nav-menu" id="navmenu">
+      <ul>
+        <li><a href="#">Menú</a></li>
+        <li><a href="#">Reservas</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Políticas</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="acciones-header">
+      <button>Registrarse</button>
+      <button>Iniciar sesión</button>
+      <div class="carrito">
+        <img src="cart.png" alt="Carrito">
+        <span>0</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="galeria">
+    <img src="slide.png" alt="Slide 1">
+  </section>
+
+  <main class="contenedor">
+    <section class="formulario">
+      <form id="formReserva">
+        <div class="campo"><label>Nombre</label><input type="text" id="nombre" required></div>
+        <div class="campo doble">
+          <div><label>Fecha</label><input type="date" id="fecha" required></div>
+          <div><label>Hora</label><input type="time" id="hora" required></div>
+        </div>
+        <div class="campo"><label>Número de personas</label><input type="number" id="personas" min="1" required></div>
+        <div class="campo"><label>Teléfono</label><input type="tel" id="telefono" required></div>
+        <div class="campo"><label>Correo</label><input type="email" id="correo" required></div>
+        <div class="campo"><label><input type="checkbox" id="decoracion"> Quiero decoración adicional (+$50.000)</label></div>
+        <div class="campo"><label><input type="checkbox" id="confirmacionCorreo"> Recibir confirmación por correo</label></div>
+        <div class="campo"><label>Observaciones</label><textarea id="observaciones"></textarea></div>
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+
+    <section class="seleccion">
+      <div class="tiempo">
+        <h3>Tiempo restante</h3>
+        <div id="contador" class="contador">15:00</div>
+      </div>
+      <h2>Selecciona tus mesas</h2>
+      <div class="mesas" id="mesas"></div>
+
+      <section class="resumen">
+        <h2>Resumen</h2>
+        <div id="resumenText">Ninguna reserva activa</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+<!-- Footer fuera del container principal -->
+  <footer class="p-b-30">
+    <h2 style="width: 100%;height: 0px;margin: 0px;opacity: 0;font-size: 1px;">
+      Hamburguesas, Rock, Music, eventos, celebraciones, música en vivo,
+    </h2>
+    <div class="container p-0 relative">
+      <div class="row row-eq-height m-t-0 sm-m-h-0 sm-text-center">
+        <div class="col-md-6 col-xs-12 p-0">
+          <div class="col-md-4 col-xs-12 p-h-10 f-12">
+            <div class="wrapt" style="display: initial;">
+              <div class="wrapc">
+                <div class="col-xs-12 col-md-12 p-0 divContetnImgFooter">
+                  <img class="img-responsive center-block visible-xs visible-sm" src="https://tienda.alrockburger.com/app_data_archivos/alrockburger.soomi.co/logoFooter_tienda-1716309295.png" alt="AL ROCK BURGER" title="AL ROCK BURGER">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix m-b-5"></div>
+          <div class="col-xs-12 p-0">
+            <h2 class="f-900 f-15">AL ROCK BURGER</h2>
+            <h2 class="m-t-0 f-13">
+              ¡En Al Rock Burguer trabajamos para que vivas la mejor experiencia, lo demás dalo por hecho!
+              Primer restaurante certificado en Quality Managment System
+            </h2>
+          </div>
+
+          <div class="col-xs-12 p-0"></div>
+
+          <div class="col-md-12 p-0 p-t-20">
+            <div class="f-900 f-15 m-b-15">CONTACTO</div>
+            <div class="f-13 m-b-5"> Bogotá, Av Kra 58#128-35. Las Villas - Cel 322 327 / y Cedritos, Av Kra 19 Nº 148-65 - Cel 3214347</div>
+            <div class="f-13 m-b-5">Bucaramanga, Cll 105 Nº 26-93, Provenza - Cel: 315 695 8555 / Lebrija, Kra 8 Nº 10-46, Centro -  Cel 321 434 363</div>
+            
+            <div class="f-13 m-b-5 custom_text_footer">
+              <p>¡En Al Rock trabajamos para que vivas la mejor experiencia, lo demás dalo por hecho!</p>
+              <p>Primer restaurante certificado en Quality Managment System</p>
+            </div>
+            <div class="f-13 m-b-5">&copy; 2025 Todos los derechos reservados</div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 p-0 f-13 hidden-xs hidden-sm p-t-30 divContainerCategoryFooter">
+          <div class="col-xs-12 p-l-25">
+            <div class="col-xs-12 f-900 f-15 p-l-0 p-b-15 m-b-10 borderBottom">
+              Categorías principales
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="TELONEROS" alt="TELONEROS" href="https://tienda.alrockburger.com/categorias/teloneros">
+                Teloneros
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="HEAVY DINNER " alt="HEAVY DINNER " href="https://tienda.alrockburger.com/categorias/heavy-dinner-">
+                Heavy Dinner 
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="LINEA VEGGIE " alt="LINEA VEGGIE " href="https://tienda.alrockburger.com/categorias/linea-veggie-">
+                Linea Veggie 
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="SANDWICH" alt="SANDWICH" href="https://tienda.alrockburger.com/categorias/sandwich">
+                Sandwich
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="HAMBURGUESAS" alt="HAMBURGUESAS" href="https://tienda.alrockburger.com/categorias/hamburguesas">
+                Hamburguesas
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="BLACK DOGS" alt="BLACK DOGS" href="https://tienda.alrockburger.com/categorias/black-dogs">
+                Black Dogs
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="KORN" alt="KORN" href="https://tienda.alrockburger.com/categorias/korn">
+                Korn
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="PAPA ROACH" alt="PAPA ROACH" href="https://tienda.alrockburger.com/categorias/papa-roach">
+                Papa Roach
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="INFANTIL" alt="INFANTIL" href="https://tienda.alrockburger.com/categorias/infantil">
+                Infantil
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="COMBOS" alt="COMBOS" href="https://tienda.alrockburger.com/categorias/combos">
+                Combos
+              </a>
+            </div>
+            <div class="col-xs-6 p-l-0">
+              <a class="animate f-11" title="BEBIDAS" alt="BEBIDAS" href="https://tienda.alrockburger.com/categorias/bebidas">
+                Bebidas
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-xs-12 p-0 sm-text-center p-t-30">
+          <div class="col-xs-12 p-0">
+            <div class="col-xs-12 f-900 f-15 p-l-0 p-b-15 m-b-10 borderBottom">
+              REDES SOCIALES
+            </div>
+            <div class="col-xs-12 p-0">
+              <div class="col-xs-3 col-sm-4">
+                <a class="inline-block f-30 icono-redes" target="_blank" href="https://www.facebook.com/profile.php?id=100089875367055">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-xs-3 col-sm-4">
+                <a class="inline-block f-30 icono-redes" target="_blank" href="https://www.instagram.com/alrock_burger/">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-xs-3 col-sm-4">
+                <a class="inline-block f-30 icono-redes" target="_blank" href="https://www.tiktok.com/@alrock.burger">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-xs-3 col-sm-4">
+                <a class="inline-block f-30 icono-redes" target="_blank" href="https://www.youtube.com/channel/UCv_vvgRhw4XJgd4cifKyicg">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                    <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47"/>
+
+</html>

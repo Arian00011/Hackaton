@@ -1,0 +1,269 @@
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.logo {
+  width: 120px;
+  margin: 10px;
+}
+header {
+  background: #ce2029;
+  padding: 10px;
+  text-align: center;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.formulario, .seleccion, .resumen {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+}
+h1, h2 {
+  color: #ffcc00;
+}
+.campo {
+  margin-bottom: 10px;
+}
+input, textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+button {
+  background: #ce2029;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+.mesas {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+.mesa {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.mesa.seleccionada {
+  background: #ce2029;
+  color: #fff;
+}
+.mesa.ocupada {
+  background: orange;
+  cursor: not-allowed;
+}
+.contador {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+@media screen and (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 10px 20px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.acciones-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.acciones-header button {
+  background: #ce2029;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.carrito {
+  position: relative;
+}
+.carrito img {
+  width: 24px;
+}
+.carrito span {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+main.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+}
+.formulario .doble {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.tiempo {
+  text-align: center;
+  background: #ce2029;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.tiempo h3 {
+  margin: 0;
+  color: #fff;
+}
+
+/* footer */
+
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer .f-13 {
+  font-size: 13px;
+}
+
+footer .f-15 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+footer .f-11 {
+  font-size: 11px;
+}
+
+footer .p-b-30 {
+  padding-bottom: 30px;
+}
+
+footer .m-b-5 {
+  margin-bottom: 5px;
+}
+
+footer .p-t-20 {
+  padding-top: 20px;
+}
+
+footer .p-t-30 {
+  padding-top: 30px;
+}
+
+footer .m-t-0 {
+  margin-top: 0;
+}
+
+footer .borderBottom {
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+footer .icono-redes {
+  color: #fff;
+  transition: color 0.3s;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .icono-redes:hover {
+  color: #ffcc00;
+}
+
+footer a.animate {
+  color: #ccc;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+footer a.animate:hover {
+  color: #ffcc00;
+}
+
+footer .col-xs-12,
+footer .col-md-4,
+footer .col-md-6,
+footer .col-md-2 {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  footer .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+
+  footer .col-md-4 {
+    width: 33.33%;
+    float: left;
+  }
+
+  footer .col-md-2 {
+    width: 16.66%;
+    float: left;
+  }
+}

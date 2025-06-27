@@ -38,7 +38,11 @@
       <form id="formReserva">
         <div class="campo"><label>Nombre</label><input type="text" id="nombre" required></div>
         <div class="campo doble">
-          <div><label>Fecha</label><input type="date" id="fecha" required></div>
+          <div>
+            <label>Fecha</label>
+            <input type="date" id="fecha" required>
+            <div id="mensajeCover" style="color: yellow; font-size: 14px; margin-top: 5px;"></div>
+          </div>
           <div><label>Hora</label><input type="time" id="hora" required></div>
         </div>
         <div class="campo"><label>Número de personas</label><input type="number" id="personas" min="1" required></div>
